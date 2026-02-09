@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+  <style>
+    .bg{fill:#ffffff}
+    .participant{fill:#f3f4f6;stroke:#d1d5db;rx:6}
+    .label{font:14px Arial;fill:#0f172a}
+    .line{stroke:#0b1220;stroke-width:2;marker-end:url(#arrow)}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b1220" />
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="20" y="30" font-family="Arial" font-size="18" font-weight="700">Sequence: Performance Regression Loop</text>
+
+  <!-- Participants -->
+  <rect x="40" y="60" width="140" height="40" rx="6" class="participant"/>
+  <text x="60" y="88" class="label">CI/CD Pipeline</text>
+
+  <rect x="220" y="60" width="160" height="40" rx="6" class="participant"/>
+  <text x="250" y="88" class="label">AI Agent</text>
+
+  <rect x="420" y="60" width="140" height="40" rx="6" class="participant"/>
+  <text x="440" y="88" class="label">MCP Server</text>
+
+  <rect x="600" y="60" width="140" height="40" rx="6" class="participant"/>
+  <text x="640" y="88" class="label">k6</text>
+
+  <rect x="800" y="60" width="160" height="40" rx="6" class="participant"/>
+  <text x="840" y="88" class="label">Datadog/CloudWatch</text>
+
+  <!-- Messages -->
+  <path d="M180 110 L240 110" class="line"/>
+  <text x="200" y="100" class="label">Trigger on Push/PR</text>
+
+  <path d="M320 140 L420 140" class="line"/>
+  <text x="350" y="132" class="label">run_test(script_path)</text>
+
+  <path d="M560 140 L600 140" class="line"/>
+  <text x="520" y="160" class="label">Launch Performance Test</text>
+
+  <path d="M740 200 L520 200" class="line"/>
+  <text x="600" y="190" class="label">Return Metrics</text>
+
+  <path d="M420 240 L420 300" class="line"/>
+  <text x="430" y="270" class="label">fetch_metrics()</text>
+
+  <path d="M760 260 L760 300" class="line"/>
+  <text x="780" y="280" class="label">System Health Data</text>
+
+</svg>

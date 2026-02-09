@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700">
+  <style>
+    .bg{fill:#ffffff}
+    .box{fill:#f3f4f6;stroke:#d1d5db;rx:8}
+    .title{font:700 20px Arial;fill:#0f172a}
+    .label{font:14px Arial;fill:#0b1220}
+    .arrow{stroke:#0b1220;stroke-width:2;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0b1220" />
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <text x="40" y="40" class="title">System Architecture (Simplified)</text>
+
+  <!-- CI/CD -->
+  <rect x="40" y="80" width="260" height="80" rx="8" fill="#0f1720"/>
+  <text x="60" y="125" fill="#fff" font-family="Arial" font-size="14">GitLab / CircleCI / ADO</text>
+
+  <!-- Orchestrator -->
+  <rect x="380" y="80" width="220" height="80" rx="8" class="box"/>
+  <text x="400" y="110" class="title">Orchestrator</text>
+  <text x="400" y="130" class="label">Agent Wrapper</text>
+
+  <!-- MCP -->
+  <rect x="660" y="80" width="220" height="80" rx="8" class="box"/>
+  <text x="680" y="110" class="title">MCP Server</text>
+
+  <!-- Tooling boxes -->
+  <rect x="40" y="220" width="220" height="60" rx="8" class="box"/>
+  <text x="60" y="255" class="label">k6 / SpeedCurve</text>
+
+  <rect x="320" y="220" width="220" height="60" rx="8" class="box"/>
+  <text x="340" y="255" class="label">Prometheus / Grafana / Loki</text>
+
+  <rect x="600" y="220" width="220" height="60" rx="8" class="box"/>
+  <text x="620" y="255" class="label">CloudWatch / Datadog / Dynatrace</text>
+
+  <rect x="880" y="220" width="220" height="60" rx="8" class="box"/>
+  <text x="900" y="255" class="label">GitHub / GitLab API</text>
+
+  <rect x="40" y="320" width="220" height="60" rx="8" class="box"/>
+  <text x="60" y="355" class="label">Grafana Cloud</text>
+
+  <rect x="320" y="320" width="220" height="60" rx="8" class="box"/>
+  <text x="340" y="355" class="label">Vector DB (Chroma/Azure)</text>
+
+  <!-- Arrows -->
+  <path d="M300 120 L380 120" class="arrow" />
+  <path d="M580 120 L660 120" class="arrow" />
+
+  <path d="M770 160 L770 220 L760 220" class="arrow" />
+  <path d="M150 160 L150 220" class="arrow" />
+  <path d="M430 160 L430 220" class="arrow" />
+
+  <path d="M240 260 L300 260" class="arrow" />
+  <path d="M520 260 L580 260" class="arrow" />
+  <path d="M800 260 L860 260" class="arrow" />
+
+  <path d="M450 320 L380 320" class="arrow" />
+
+  <text x="300" y="100" class="label">Webhook: push/PR</text>
+  <text x="520" y="100" class="label">Routed Options</text>
+
+</svg>
